@@ -1,0 +1,92 @@
+//import mixin file
+@use './mixins' as *;
+
+.houses {
+    direction: rtl;
+    min-height: 100vh;
+    .houses-header {
+        background-image: url('../assets/images/Rectangle\ 72.png');
+        height: 26vh;
+        text-align: center;
+        color: white;
+        padding: 1rem;
+        h1 {
+            font-size: 4rem;
+        }
+        p {
+            font-size: 18px;
+            margin: 10px;
+            letter-spacing: 1.3px;
+        }
+    }
+    .houses-content {
+        @include flex(space-evenly, center);
+        flex-wrap: wrap;
+    }
+}
+.house {
+    width: 240px;
+    height: 400px;
+    margin: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 3px 2px #161D6F;
+    overflow: hidden;
+    .house-content {
+        h1 {
+            border-radius: 12px 12px 0 0;
+            background-image: url('../assets/images/Rectangle\ 72.png');
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        .img {
+            height: 175px;
+            img {
+                background-size: cover;
+                height: 100%;
+                width: 100%;
+            }
+          
+    }
+    .house-site {
+        color: #201241;
+        display: flex;
+        margin-top: 12px;
+        font-weight: bold;
+        @include flex(space-evenly, center);
+        font-size: 12px;
+        .house-site-one {
+            padding: 10px;
+            &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+                margin-right: 4px;
+                padding: 3px;
+                border-right: 1px solid;
+                i {
+                    margin: 0 2px;
+                }
+                }
+        }
+    }
+ }
+    h2 {
+        margin: 12px;
+        font-size: 15px;
+        color: rgba(2, 2, 128, 0.918);
+        font-weight: bold;
+    }   
+    .info {
+        color: rgb(77, 76, 170);
+        @include flex(space-around, center);
+        flex-direction: column;
+        .info-one {
+            @include flex(space-between, center);
+            margin-bottom: 10px;
+            width: 90%;
+        }
+    }
+}
+@media (max-width: 575px) {
+    .house {
+        width: 326px;
+    }
+}

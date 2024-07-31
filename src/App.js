@@ -1,23 +1,26 @@
-import { Route, Routes } from 'react-router-dom';
-import Init from './pages/website/Init';
-import Login from './pages/website/auth/Login';
-import './styles/index.css';
-import './styles/login.css';
-import Register from './pages/website/auth/Register';
-import Logout from './pages/Logout';
-import Verfiy from './pages/website/Verfiy';
+import Init from "./pages/website/Init";
+import "./styles/index.css";
+import Houses from "./pages/website/Houses";
+import Divider from "./component/Divider";
+import Advantages from "./pages/website/Advantages";
+import { useState } from "react";
+import About from "./pages/website/About";
 
 export default function App() {
+  const [translate, setTranslate] = useState("");
+  translate
+    ? document.getElementById(translate).scrollIntoView({ behavior: "smooth" })
+    : console.log("n");
   return (
-       <Routes>
-        <Route path='/verfiy' element={<Verfiy/>}/>
-        <Route path='/' element={<Init/>}/>
-        <Route path='/' element={<Init/>}>
-         <Route path='login' element={<Login/>}/>
-         <Route path='logout' element={<Logout/>}/>
-         <Route path='register' element={<Register/>}/>
-        </Route>
-     </Routes>
-
-  )
+    <div className="container">
+      <Init setTranslate={setTranslate} />
+      <Divider />
+      <Houses />
+      <Divider />
+      <Advantages />
+      <Divider />
+      <About />
+      <Divider />
+    </div>
+  );
 }

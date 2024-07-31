@@ -1,0 +1,32 @@
+.advantages {
+  background-image: url("../assets/images/Rectangle 72.png");
+  padding: 20px;
+}
+.advantages h1 {
+  color: white;
+  text-align: center;
+  margin: 25px;
+}
+.advantages .advantages-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.advantage {
+  width: 40vw;
+  padding: 10px;
+  background-color: white;
+  border-radius: 12px;
+  margin: 15px;
+  text-align: center;
+  color: #161D6F;
+}
+
+@media (max-width: 575px) {
+  .advantage {
+    width: 90vw;
+  }
+}/*# sourceMappingURL=advantages.css.map */

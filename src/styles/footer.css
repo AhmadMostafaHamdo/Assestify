@@ -1,0 +1,14 @@
+.footer {
+  background-image: url("../assets/images/Rectangle 72.png");
+  height: 168.1px;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer div {
+  text-align: center;
+}
+.footer div img {
+  width: 80%;
+}/*# sourceMappingURL=footer.css.map */
